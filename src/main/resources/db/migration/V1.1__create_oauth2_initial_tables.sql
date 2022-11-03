@@ -8,7 +8,7 @@ drop table if exists oauth_user;
 
 create table oauth_user
 (
-    id                  bigint       not null auto_increment,
+    id                  bigserial       not null,
     username            varchar(255) not null,
     password            varchar(255) not null,
 
@@ -18,41 +18,39 @@ create table oauth_user
     enabled             boolean,
 
     PRIMARY KEY (id)
-) engine = InnoDB;
+);
 
 create table oauth_authority
 (
-    id                  bigint       not null auto_increment,
+    id                  bigserial       not null,
     name                varchar(255) not null,
     PRIMARY KEY (id)
-) engine = InnoDB;
+);
 
 create table oauth_user_authorities
 (
     user_id                  bigint       not null,
-    authority_id             bigint       not null,
-    KEY (user_id),
-    KEY (authority_id)
-) engine = InnoDB;
+    authority_id             bigint       not null
+);
 
 
 create table oauth_access_token (
   token_id varchar(255),
-  token blob,
+  token bytea,
   authentication_id varchar(255) primary key,
   user_name varchar(255),
   client_id varchar(255),
-  authentication blob,
+  authentication bytea,
   refresh_token varchar(255)
-) engine = InnoDB;
+);
 
 create table oauth_client_token (
   token_id varchar(255),
-  token blob,
+  token bytea,
   authentication_id varchar(255) primary key,
   user_name varchar(255),
   client_id varchar(255)
-) engine = InnoDB;
+);
 
 create table oauth_client_details (
   client_id varchar(255) primary key,
@@ -66,10 +64,10 @@ create table oauth_client_details (
   refresh_token_validity integer,
   additional_information varchar(4096),
   autoapprove varchar(255)
-) engine = InnoDB;
+) ;
 
 create table oauth_refresh_token (
   token_id varchar(255),
-  token blob,
-  authentication blob
+  token bytea,
+  authentication bytea
 );

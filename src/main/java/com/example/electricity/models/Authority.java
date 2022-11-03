@@ -1,4 +1,4 @@
-package com.example.electricity.security_oauth2.models.security;
+package com.example.electricity.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

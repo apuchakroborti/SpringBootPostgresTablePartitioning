@@ -1,6 +1,6 @@
-insert into oauth_authority(id, name) values (1, "ADMIN");
-insert into oauth_authority(id, name) values (2, "USER");
-insert into oauth_authority(id, name) values (3, "EMPLOYEE");
+insert into oauth_authority(id, name) values (1, 'ADMIN');
+insert into oauth_authority(id, name) values (2, 'USER');
+insert into oauth_authority(id, name) values (3, 'EMPLOYEE');
 
 
 insert into oauth_user(username, PASSWORD, ACCOUNT_EXPIRED, ACCOUNT_LOCKED, CREDENTIALS_EXPIRED, ENABLED)

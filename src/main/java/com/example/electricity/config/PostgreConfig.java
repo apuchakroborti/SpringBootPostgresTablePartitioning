@@ -40,7 +40,7 @@ public class PostgreConfig {
     @Value("${spring.datasource.password}")
     private String dataSourcePassword;
 
-    @Primary
+//    @Primary
     @Bean(value = "primaryDataSource")
     public DataSource primaryDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -52,7 +52,7 @@ public class PostgreConfig {
         return dataSource;
     }
 
-    @Primary
+//    @Primary
     @Bean(name = "postgresEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(@Qualifier("primaryDataSource") DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
@@ -67,7 +67,7 @@ public class PostgreConfig {
         return em;
     }
 
-    @Primary
+//    @Primary
     @Bean(name = "postgresTransactionManager")
     public PlatformTransactionManager transactionManager(@Qualifier("postgresEntityManagerFactory")
                                                                  EntityManagerFactory entityManagerFactory) {

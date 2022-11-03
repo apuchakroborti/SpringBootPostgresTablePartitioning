@@ -34,7 +34,6 @@ public class AuthServerOAuth2Config extends AuthorizationServerConfigurerAdapter
     Logger logger = LoggerFactory.getLogger(AuthServerOAuth2Config.class);
 
     @Autowired
-    @Qualifier("dataSource")
     private DataSource dataSource;
 
     @Autowired

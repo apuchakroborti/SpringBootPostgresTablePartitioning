@@ -1,6 +1,5 @@
 package com.example.electricity.models;
 
-import com.example.electricity.security_oauth2.models.security.User;
 import lombok.*;
 
 import javax.persistence.*;
@@ -8,7 +7,7 @@ import java.time.LocalDate;
 
 //using @Getter and @Setter instead of @Data to remove recursive toString method
 @Entity
-@Table(name = "USER")
+@Table(name = "USERS")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -55,5 +54,6 @@ public class CustomUser extends EntityCommon {
     private Boolean status;
 
     @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name ="oauth_user_id")
     private User oauthUser;
 }

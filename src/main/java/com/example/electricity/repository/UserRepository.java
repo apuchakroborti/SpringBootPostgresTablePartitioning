@@ -1,6 +1,6 @@
-package com.example.electricity.security_oauth2.repository;
+package com.example.electricity.repository;
 
-import com.example.electricity.security_oauth2.models.security.User;
+import com.example.electricity.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

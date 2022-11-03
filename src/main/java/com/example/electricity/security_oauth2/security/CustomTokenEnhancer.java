@@ -3,8 +3,8 @@ package com.example.electricity.security_oauth2.security;
 
 import com.example.electricity.exceptions.GenericException;
 import com.example.electricity.dto.CustomUserDto;
-import com.example.electricity.security_oauth2.models.security.Authority;
-import com.example.electricity.security_oauth2.models.security.User;
+import com.example.electricity.models.Authority;
+import com.example.electricity.models.User;
 import com.example.electricity.services.CustomUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

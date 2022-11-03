@@ -1,4 +1,4 @@
-package com.example.electricity.security_oauth2.models.security;
+package com.example.electricity.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -23,12 +23,16 @@ public class User implements UserDetails, Serializable {
 
     private String password;
 
+    @Column(name = "account_expired")
     private boolean accountExpired;
 
+    @Column(name = "account_locked")
     private boolean accountLocked;
 
+    @Column(name = "credentials_expired")
     private boolean credentialsExpired;
 
+    @Column(name = "enabled")
     private boolean enabled;
 
 
